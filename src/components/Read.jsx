@@ -42,7 +42,8 @@ const Read = () => {
     navaigations("/update");
   };
   return (
-    <div>
+    <div className="" >
+      <center>
       <div>
         <button onClick={readtoadd} className="btn-add">
           ADD
@@ -60,13 +61,15 @@ const Read = () => {
       </thead>
       {data.map((e, id) => {
         return (
-          <div className="box" key={id}>
+          <div className="" key={id}>
             <tbody>
               <tr>
+                <div className="data">
                 <td>{e.id}</td>
                 <td>{e.name}</td>
                 <td>{e.email}</td>
                 <td>{e.password}</td>
+                <td>
                 <button
                   style={{ borderRadius: "100%" }}
                   onClick={() => handleDelete(e.id)}
@@ -82,11 +85,15 @@ const Read = () => {
                 >
                   <RxUpdate  onClick={readtoupdate}/>
                 </button>
+                </td>
+                </div>
+              
               </tr>
             </tbody>
           </div>
         );
       })}
+      </center>
     </div>
   );
 };
